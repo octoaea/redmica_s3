@@ -99,7 +99,8 @@ module RedmicaS3
         load_options unless @@s3_options[:access_key_id] && @@s3_options[:secret_access_key]
         options = {
           access_key_id:      @@s3_options[:access_key_id],
-          secret_access_key:  @@s3_options[:secret_access_key]
+          secret_access_key:  @@s3_options[:secret_access_key],
+          force_path_style: @@s3_options[:force_path_style]
         }
         if endpoint.present?
           options[:endpoint] = endpoint
